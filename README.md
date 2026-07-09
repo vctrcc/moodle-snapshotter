@@ -36,6 +36,8 @@ One-click Chrome extension that downloads an entire Moodle course into an offlin
 
 ## Usage
 
+![Popup](illustrations/Moodle-Snapshotter-popup.png)
+
 1. Navigate to any Moodle course page
 2. Click the extension icon → a settings popup appears
 3. Configure options:
