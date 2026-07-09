@@ -1,0 +1,27 @@
+# Debug history — large test outputs
+DEBUG_TESTS_HISTORY/
+
+# Reference websites — Moodle page snapshots for offline testing
+Reference Websites/
+
+# Historical backups — superseded versions
+content.safe.*
+
+# IDE / OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+*.code-workspace
+
+# Node modules
+node_modules/
+package-lock.json
+
+# Zip archives
+*.zip
+
+# Windows junk
+desktop.ini

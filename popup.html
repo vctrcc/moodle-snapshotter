@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Moodle Snapshotter</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:system-ui,-apple-system,sans-serif;
+    width:360px;background:#0b1120;color:#e2e8f0;
+  }
+  .hdr{
+    padding:14px 16px 10px;border-bottom:1px solid #1e293b;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .hdr h2{
+    font-size:17px;font-weight:700;
+    background:linear-gradient(135deg,#93c5fd,#a78bfa);
+    -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  }
+  .hdr .ver{font-size:11px;opacity:.4}
+  .body{padding:10px 14px 14px}
+  .row{display:flex;gap:10px;margin-bottom:10px}
+  .box{
+    flex:1;border:1px solid #1e293b;border-radius:10px;padding:8px 10px;
+  }
+  .box h4{
+    font-size:10px;font-weight:600;text-transform:uppercase;
+    letter-spacing:.5px;opacity:.5;margin-bottom:6px;
+  }
+  label{
+    display:flex;align-items:center;gap:6px;font-size:12px;
+    margin:5px 0;cursor:pointer;
+  }
+  label.sm{font-size:11px;margin:3px 0;gap:5px}
+  input[type="checkbox"]{accent-color:#3b82f6;width:14px;height:14px;cursor:pointer}
+  input[type="number"]{
+    width:50px;padding:2px 4px;border-radius:5px;text-align:center;
+    border:1px solid #334155;background:#1e293b;color:#e2e8f0;font-size:12px;
+  }
+  input[type="number"]:focus{outline:none;border-color:#3b82f6}
+  .muted{opacity:.4;font-size:10px}
+  button{
+    width:100%;padding:10px;font-weight:600;font-size:14px;border-radius:10px;
+    cursor:pointer;border:none;margin-top:4px;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);color:#fff;
+    transition:opacity .15s;
+  }
+  button:hover{opacity:.9} button:active{opacity:.75}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <h2>Moodle Snapshotter</h2>
+  <span class="ver">v2.18.3</span>
+</div>
+<div class="body">
+  <div class="row">
+    <div class="box">
+      <h4>Content</h4>
+      <label><input id="opt-images" type="checkbox" checked />Inline images</label>
+      <label><input id="opt-labels" type="checkbox" checked />Labels &amp; pages</label>
+    </div>
+    <div class="box">
+      <h4>Speed</h4>
+      <label>Threads <input id="opt-concurrency" type="number" min="1" max="12" step="1" value="5" /></label>
+      <label>Crawl <input id="opt-crawl-depth" type="number" min="0" max="5" step="1" value="3" /></label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="box">
+      <h4>Size limits <span class="muted">0=unlimited</span></h4>
+      <label>Per file <input id="opt-max-file" type="number" min="0" max="5000" step="10" value="250" /> MB</label>
+      <label>Total <input id="opt-max-total" type="number" min="0" max="10000" step="100" value="2000" /> MB</label>
+    </div>
+    <div class="box">
+      <h4>Extras</h4>
+      <label class="sm"><input id="opt-verbose" type="checkbox" />Verbose logs</label>
+      <label class="sm"><input id="opt-anonymize" type="checkbox" />Anonymize <span class="muted">(John Doe, no photos)</span></label>
+    </div>
+  </div>
+  <button id="download">Create course snapshot (ZIP)</button>
+</div>
+<script src="popup.js"></script>
+</body>
+</html>

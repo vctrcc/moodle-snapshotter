@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Moodle Snapshotter",
+  "version": "2.18.3",
+  "description": "One‑click snapshot of Moodle course home: files, folders, URLs, labels/pages, inline images, and an offline index — zipped.",
+  "permissions": ["activeTab", "scripting", "notifications", "storage", "downloads"],
+  "host_permissions": ["https://moodle.uclouvain.be/*"],
+  "action": { "default_popup": "popup.html" },
+  "icons": {
+  "16": "icons/icons8-download-book-others-16.png",
+  "32": "icons/icons8-download-book-others-32.png",
+  "96": "icons/icons8-download-book-others-96.png"
+  },
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+  {
+  "matches": ["https://moodle.uclouvain.be/*"],
+  "css": ["styles/overlay.css"],
+   "js": ["libs/jszip.min.js", "anonymizer.js", "content.js"],
+  "run_at": "document_idle"
+  }
+  ]
+  }

@@ -1,0 +1,14 @@
+/* overlay.css — Base styles for the snapshot progress overlay
+   Injected via manifest content_scripts CSS. The inline styles in
+   content.js override most properties; this provides fallback sizing. */
+#moodle-snap-overlay { position: fixed; z-index: 2147483647; right: 12px; bottom: 12px; width: 480px; background: #111; color: #eee; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,.35); font: 13px/1.35 system-ui, Arial, sans-serif; }
+#moodle-snap-overlay header { display: flex; align-items: center; justify-content: space-between; padding: 10px 12px; border-bottom: 1px solid #222; }
+#moodle-snap-overlay header h3 { margin: 0; font-size: 14px; }
+#moodle-snap-overlay .body { padding: 10px 12px; }
+#moodle-snap-overlay progress { width: 100%; height: 12px; }
+#moodle-snap-overlay .row { display: flex; gap: 8px; align-items: center; margin: 6px 0; }
+#moodle-snap-overlay .muted { opacity: .7; }
+#moodle-snap-overlay footer { padding: 10px 12px; display: flex; gap: 8px; border-top: 1px solid #222; }
+#moodle-snap-overlay button { padding: 6px 8px; border-radius: 8px; cursor: pointer; }
+#moodle-snap-overlay .log { max-height: 120px; overflow: auto; background: #0b0b0b; border-radius: 8px; padding: 6px 8px; margin-top: 8px; }
+#moodle-snap-overlay .log pre { white-space: pre-wrap; margin: 0; }
