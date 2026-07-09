@@ -1,5 +1,7 @@
 # Moodle Snapshotter
 
+> **AI Disclosure:** This software was primarily developed through AI-assisted code generation (Claude, via OpenCode). Per Article 50 of the EU AI Act (2024/1689), users are informed that AI systems contributed substantially to the creation of this work. All AI output was reviewed, tested, and approved by a human operator before release. The human operator assumes full legal responsibility for the published artifact.
+
 One-click Chrome extension that downloads an entire Moodle course into an offline ZIP archive — files, folders, URLs, pages, forums, assignments, inline images, and a searchable index.
 
 ![version](https://img.shields.io/badge/version-2.18.3-blue)
