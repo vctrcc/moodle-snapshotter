@@ -2,7 +2,7 @@
 
 > **AI-Assisted Development Disclosure:**
 > 
-> This software was developed with the assistance of AI-based code generation tools, including Claude via OpenCode. AI-generated suggestions were used as part of the development process, but all generated code and related outputs were reviewed, tested, modified where necessary, and approved by a human operator before release.
+> This software was developed with the assistance of AI-based code generation tools via OpenCode. AI-generated suggestions were used as part of the development process, but all generated code and related outputs were reviewed, tested, modified where necessary, and approved by a human operator before release.
 > 
 > This disclosure is provided for transparency. The published software remains under the responsibility of the human operator or organisation releasing it.
 
